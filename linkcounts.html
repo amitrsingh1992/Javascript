@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Listing name and its count</title>
+    </head>
+    <body>
+        <script>
+        var linkcount,linkname,text,j,n=1;
+             linkcount = 0;
+             
+             text="Age of Science and technology leads to drastic changes in human day today routine."+
+                    "Now we can search anything sitting at home using search engine like www.google.com or "+
+                    "www.firefox.com. Similarly,we have www.gmail.com,www.rediffmail.com,www.hotmail.com or "+
+                    "www.yahoomail.com for mailing.We also have education site like www.w3school.com,www.tutorialpoint.com,etc."
+                document.write("List of link in a given string:<br>");
+                
+                    for(var i=0;i<text.length;i++)
+
+                    {
+                    
+                            if(text[i]=="w" && text[i+1]=="w" && text[i+2]=="w")
+                            {
+                                for(var k=i+2;k<text.length;k++)
+                                    {
+                                        if(text[k]=="c" && text[k+1]=="o" && text[k+2]=="m")
+                                          {
+                                              var linkname = "";
+                                               for( j=i;j<=(k+2);j++)
+                                                {
+                                                  
+                                                                linkname+=text[j];
+                                                          
+                                                }
+                                                document.write(n+")"+linkname);n++;
+                                                document.write("<br>");
+                                               linkcount++;break;
+                                          }
+                                         
+                                    }i=k+2;
+                                                
+                            }
+                    }
+                    
+                    document.write("No. of links =" + linkcount);
+        </script>
+    </body>
+</html>

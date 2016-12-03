@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script "text/javascript">
+        function add()
+        {
+            var a = document.cal.num1.value;
+            var b = document.cal.num2.value;
+            var c = parseInt(a) + parseInt(b);
+            document.cal.res.value=c;
+        }
+        function sub()
+        {
+            var a = document.cal.num1.value;
+            var b = document.cal.num2.value;
+            var c = parseInt(a) - parseInt(b);
+            document.cal.res.value=c;
+        }
+        function div()
+        {
+            var a = document.cal.num1.value;
+            var b = document.cal.num2.value;
+            var c = parseInt(a) / parseInt(b);
+            document.cal.res.value=c;
+        }
+        function mul()
+        {
+            var a = document.cal.num1.value;
+            var b = document.cal.num2.value;
+            var c = parseInt(a) * parseInt(b);
+            document.cal.res.value=c;
+        }
+        </script>
+</head>
+
+<body>
+    <form name="cal">
+        Enter 1st Element:<input type="text" , name="num1" \></br>
+        Enter 2nd Element:<input type="text" , name="num2" \></br>
+        <select name="Select Option">
+                     <option value ="Select Option">Select Option</option>
+                    <option value ="addition" onclick=add()>Addition</option>
+                    <option value ="subtraction" onclick=sub()>Subtraction</option>
+                    <option value ="division" onclick=div()>Division</option>
+                    <option value ="multiplication" onclick=mul()>Multiplication</option>
+                </select> </br>
+        Result = <input type="text" , name="res" \></br>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Equality Checker</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    
+            var str1 = "Rastogi";
+            var str2 = new String("Rastogi");
+            var num1 = 45;
+            var num2 = new Number(45);
+            var arr1 = [1,2,3,4,5];
+            var arr2 = new Array(1,2,3,4,5);
+
+            
+            document.write( "The result of comparison for two given String is viz 'Rastogi' and new String('Rastogi') :: " + (str1===str2) + "<br><br>");
+            document.write( "The result of comparison for two given Number is viz 45 and new Number(45) :: " + (num1===num2) + "<br><br>");
+            document.write( "The result of comparison for two given Array is viz [1,2,3,4,5] and new Array(1,2,3,4,5) :: " + (arr1===arr2) + "<br><br>");
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+<body>
+	<script>
+		function calculation() {
+			var num1;
+			var num2;
+			this.first = function(num1) {
+			document.write("The first number is "+num1+".<br>");
+			this.num1 = new Number(num1);
+			return this; 	//if you dont write return this ,it will give the error
+		    	}
+			this.second = function(num2) {
+			document.write("The second number is "+num2+".<br>");
+			this.num2 = new Number(num2);
+			return this; 	//if you dont write return this ,it will give the error
+			}
+	
+	
+			this.sum = function() {
+		//	add = num1 + num2;
+			return this.num1 + this.num2;
+		    	}
+		}
+		 function final(){
+			 var temp=document.form1.num1.value;
+			 var temp1=document.form1.num2.value;
+		document.write("Sum is::"+new calculation().first(temp).second(temp1).sum()); // 9
+		}
+	</script>
+	<!--<form>
+	<h3>Calculation of the given number using Chaining method</h3><br>
+	<p>Click the below <strong>Click Me</strong> button to perform the task.</p>
+	<input type="button" value="Click Me" onclick="final()"/>
+</form>
+	</body>
+</html>-->
+	<form name="form1">
+		number 1:<input type="number" name="num1" required/>
+		number 2:<input type="number" name="num2" required/>
+		<input type="button" value="Click Me" onclick="final()" />
+	</form>
+</body>
+
+</html>

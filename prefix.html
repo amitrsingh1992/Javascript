@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Prefix BridgeLabz</title>
+</head>
+
+<body>
+    <script type="text/javascript">  
+
+    function msg(){  
+        
+    var n= prompt("How many name you want to enter through this program?");
+    alert("You want " + n +" input.");
+    document.write(n+" name needed to be entered.<br><br>");
+    document.write("The respective names are:<br>");
+    for(i=0;i<n;i++){ 
+    var v= prompt("Who are you?"); 
+    alert("Bridgelabz:I am "+v);
+    document.write((i+1)+".Bridgelabz:"+" "+ v+"<br>");
+    if((i+1)==n)
+    document.write("<br>The number of entering data limit reached!");
+    }  
+    return ;
+     }  
+    </script>
+    <form >
+
+        <p>Program about adding prefix in a page while enter ur data.</p>
+        <p>Click the below click button to begin the process.</p>
+        <input type="button" value="click" onclick="msg()" />
+
+
+    </form>
+</body>
+
+</html>
