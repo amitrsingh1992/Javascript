@@ -1,47 +1,13 @@
 <html>
-	<head>
-		<script>
-			function myFunction()
-			{
-				var links, i , linkArray,myDocument ,pos,pos1;
-				linkArray  = [];
-				//linkArray = document.getElementsByTagName("a");
-				myDocument = "You can you www.google.com for searching anything on web.or"+
-				" www.facebook.com is social website.www.hotmail.com is mailing server www.gmail.comwww.rediffmail.com."
-				pos = 0;
-				pos1 = 0;
-				for(i=0 ; i < myDocument.length ; i++ )
-				{
-					pos = myDocument.indexOf("www",pos);	
-					pos1 = myDocument.indexOf(".com",pos1);
-				
-					linkArray[i] = myDocument.substring(pos,pos1+4);	// to store the full link from document
-					// To break the Loop if found last link
-					if(pos1 == myDocument.lastIndexOf(".com"))
-						break;
-					pos += 3;	// increment by 3 for www
-					pos1 += 4;	//increment by 4 for .com
-				}	
-				document.getElementById("link1").innerHTML = "Number of links are :: <b>" + linkArray.length+ " <b>";
-				links = "";
-				for(i=0; i<linkArray.length; i++)
-				links += "<br>" + linkArray[i];
-				document.getElementById("link2").innerHTML = "Links are following::<b>" + links ,i+ "</b>";
-			}
-		</script>
-	</head>
-
-	<body>
-
-		<h2>Link Document </h2>
-
-		<a href="http://www.gmail.com">Gmail Here</a><br>
-		<a href="http://www.hotmail.com">Hotmail Here</a><br>
-		<a href="http://www.rediffmail">Rediffmail here</a><br>
-		<a href="http://www.ymail.com">Yahoomail here</a><br>
-		<button onclick = "myFunction()" >Check Link</button>
-
-		<div id="link1">?</div>
-		<div id="link2">?</div>
-	</body>
+<head></head>
+<body>
+<script>
+for(var i = 0; i < 10; i++) {
+    setTimeout(function() {
+        console.log(i);  
+    }, 1000);
+	
+}
+</script>
+</body>
 </html>

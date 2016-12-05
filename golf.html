@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Golf Player</title>
+</head>
+
+<body>
+        <script type="text/javascript">
+
+    function golfResult(par,strokes)
+    {
+        console.log(typeof strokes);
+        if(strokes == 1)
+        {
+            return document.write("Hole-in-one!");
+        }
+        else 
+        
+        if(strokes <= (par-2))
+        {
+            return document.write("Eagle");
+        }
+        else 
+        
+        if(strokes == (par-1))
+        {
+            return document.write("Birdie");
+        }
+        else 
+     
+        if(strokes == par)
+        {
+            return document.write("Par");
+        }
+        else 
+        
+        if(strokes == (par+1))
+        {
+            return document.write("Bogey");
+        }
+        else 
+        
+        if(strokes == (par+2))
+        {
+            return document.write("Double Bogey");
+        }
+        else 
+        
+        if(strokes >= (par+3))
+        {
+            return document.write("Go Home!");
+        }
+             
+    }
+
+    function finalResult()
+    {
+        var par = Number.parseInt(document.form1.par.value);
+        var strokes = Number.parseInt(document.form1.strokes.value);
+
+        document.write("The result of Golf is " );
+         golfResult(par,strokes);
+       
+        
+    }
+
+    </script>
+    <center>
+            <h3>Golf Result</h3>
+   
+    <form name="form1">
+       <table>
+        <tr><td>    
+        Strokes:</td><td><input type = "text" name = "strokes" required/></td>
+        </tr>
+        <tr><td>
+        Par:</td><td><input type = "text" name = "par" required=""/></td>
+        </tr>
+        <tr></tr>
+        </table>        
+    <button type = "button" onclick = "finalResult()" >submit</button>
+    </form>
+ </center>
+
+</body>
+
+</html>

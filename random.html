@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Random Whole Number Generator</title>
+</head>
+
+<body>
+
+    <script type="Text/javascript">
+    function random(min,max) 
+    { 
+        return Math.floor(Math.random() * max) + min;  
+    }
+    function final()
+    {
+        var max = new Number(document.f1.max.value);
+        var min = new Number(document.f1.min.value);
+      
+        document.write("Output="+random(min,max));
+    }
+    </script>
+        <form name="f1">
+            Min range:<input type="Number" name="min" />
+            <br><br>
+            Max range:<input type="Number" name="max" />
+            <br><br>
+            <input type="button" value="Generate" onclick="final()" />
+        </form>
+
+</body>
+
+</html>

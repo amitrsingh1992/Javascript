@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Shopping List</title>
+</head>
+
+<body>
+    <script>
+var mylist=[["Chocolate Bar",15],["Bread",20],["Milk pouch",17],["Biscuit",18]];
+document.write("Data in array intially:<br>");
+for(var i=0;i<mylist.length;i++)
+{
+document.write(i+1+")"+mylist[i].join("-")+"<br>");
+}
+document.write("<br><br>");
+mylist.pop();
+document.write("Data in array after <strong>Pop</strong> cmd:(removing data from end)<br>");
+for(var i=0;i<mylist.length;i++)
+{
+document.write(i+1+")"+mylist[i].join("-")+"<br>");
+}
+document.write("<br><br>");
+mylist.push(["Soap",14]);
+document.write("Data in array after <strong>Push</strong> cmd:(adding data to end)<br>");
+for(var i=0;i<mylist.length;i++)
+{
+document.write(i+1+")"+mylist[i].join("-")+"<br>");
+}
+document.write("<br><br>");
+document.write("Data in array after <strong>Shift</strong> cmd:(removing data from beginning)<br>");
+mylist.shift();
+for(var i=0;i<mylist.length;i++)
+{
+document.write(i+1+")"+mylist[i].join("-")+"<br>");
+}
+document.write("<br><br>");
+document.write("Data in array after <strong>Unshift</strong> cmd:(adding data to beginning)<br>");
+mylist.unshift(["Butter pack",25]);
+for(var i=0;i<mylist.length;i++)
+{
+document.write(i+1+")"+mylist[i].join("-")+"<br>");
+}
+</script>
+</body>
+
+</html>
