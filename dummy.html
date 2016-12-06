@@ -1,38 +1,68 @@
+<!DOCTYPE html>
 <html>
-<head></head>
+
+<head>
+    <meta charset="utf-8">
+    <title>Student</title>
+    <style>
+        .mainDiv {
+            background-color: #7692E1;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+        /**
+        *@Constructor
+        *function to create another window and display all the form content .
+        */
+        function display() {
+            alert("Loaded");
+            DispWin = window.open('', 'NewWin', 'toolbar=no,status=no,width=300,height=200')
+            message = "<ul><li><b>NAME: </b>" + document.getElementById("sname").value + "</li>";
+            message += "<li><b>Roll: </b>" + document.getElementById("sroll").value + "</li>";
+            message += "<li><b>Age: </b>" + document.getElementById("sage").value + "</li></ul>";
+            DispWin.document.write(message);
+        }
+    </script>
+</head>
+
 <body>
-<h3>Simple Calculator</h3>
-<br/>
-<form Name="calc">
-<table border=2>
-<tr>
-<td colspan=4><input type=text Name="display"></td>
-</tr>
-<tr>
-<td><input type=button value="0" OnClick="calc.display.value+='0'"></td>
-<td><input type=button value="1" OnClick="calc.display.value+='1'"></td>
-<td><input type=button value="2" OnClick="calc.display.value+='2'"></td>
-<td><input type=button value="+" OnClick="calc.display.value+='+'"></td>
-</tr>
-<tr>
-<td><input type=button value="3" OnClick="calc.display.value+='3'"></td>
-<td><input type=button value="4" OnClick="calc.display.value+='4'"></td>
-<td><input type=button value="5" OnClick="calc.display.value+='5'"></td>
-<td><input type=button value="-" OnClick="calc.display.value+='-'"></td>
-</tr>
-<tr>
-<td><input type=button value="6" OnClick="calc.display.value+='6'"></td>
-<td><input type=button value="7" OnClick="calc.display.value+='7'"></td>
-<td><input type=button value="8" OnClick="calc.display.value+='8'"></td>
-<td><input type=button value="x" OnClick="calc.display.value+='*'"></td>
-</tr>
-<tr>
-<td><input type=button value="9" OnClick="calc.display.value+='9'"></td>
-<td><input type=button value="C" OnClick="calc.display.value=''"></td>
-<td><input type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td>
-<td><input type=button value="/" OnClick="calc.display.value+='/'"></td>
-</tr>
-</table>
-</form>
+    <div class="mainDiv">
+        <!--FORM - Student Registration-->
+        <form id="sform">
+            <fieldset>
+                <legend>Student Registration</legend>
+
+                <table>
+                    <h1>
+                      <tr>
+                        <td>Name</td>
+                        <td><input type="text" id="sname" name="sname"></td>
+                      </tr>
+                      <tr>
+                        <td>Roll</td>
+                        <td><input type="number" id="sroll" name="sroll"></td>
+                      </tr>
+                      <tr>
+                        <td>Age</td>
+                        <td><input type="number" id="sage" name="sage"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><input type="button" value="Submit" onclick="display();"></td>
+                        <td><input type="reset" id="reset" value="Reset"></td>
+                      </tr>
+                    </h1>
+                </table>
+            </fieldset>
+        </form>
+    </div>
 </body>
+
 </html>

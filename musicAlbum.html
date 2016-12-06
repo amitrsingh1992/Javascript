@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Music Album</title>
+    <script type="text/javascript">
+        var albums = {
+                "1245": {
+                    "artist": "Robert Palmer",
+                    "tracks": []
+                },
+                "2468": {
+                    "album": "1999",
+                    "artist": "Prince",
+                    "tracks": [
+                        "1999",
+                        "Little Red Corvette"
+                    ]
+                },
+                "2548": {
+                    "album": "Slippery When Wet",
+                    "artist": "Bon Jovi",
+                    "tracks": [
+                        "Let It Rock",
+                        "You Give Love a Bad Name"
+                    ]
+                },
+                "5439": {
+                    "album": "ABBA Gold"
+                }
+            }
+                   
+        function update(id, prop, value) {
+            if (value !== "") {
+                albums[id] = albums[id] || {}; // to create id if required
+                if (prop == "tracks") {
+                    albums[id].tracks = albums[id].tracks || []; // create empty tracks array if required
+                    albums[id].tracks.push(prop);
+                } else {
+                    albums[id][prop] = value;
+                }
+            } else {
+                if (albums[id][prop].hasOwnProperty()) {
+                } else {
+                    delete albums[id][prop];
+                }
+            }
+            return albums;
+        }
+        //TEST//
+        update(5439, "artist", "ABBA");
+        var albumJson = JSON.parse(JSON.stringify(albums));
+        console.log(albumJson);
+        </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

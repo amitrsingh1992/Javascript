@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>Vehicle Detail</title>
+
+    <script type="text/javascript">
+        var vdetail;
+        var vehicle = function(vehicleType, maxSpeed, displacement) {
+            this.maxSpeed = maxSpeed;
+            this.vehicleType = vehicleType;
+            this.displacement = displacement;
+        };
+        vehicle.prototype.setMaxSpeed = function(speed) {
+            this.maxSpeed = speed;
+            return this.maxSpeed;
+        };
+        vehicle.prototype.setVehicleType = function(vehicleType) {
+            this.vehicleType = vehicleType;
+            return this.vehicleType;
+        };
+        vehicle.prototype.setDisplacement = function(arg) {
+            this.displacement = arg;
+            return this.displacement;
+        };
+        var bike = new vehicle(500, "bike", 20);
+        bike.getspeed = function() {
+            return this.maxspeed;
+        };
+        function createvehicle() {
+            var speed = document.getElementById("ms").value;
+            var vtype = document.getElementById("vt").value;
+            var disp = document.getElementById("dis").value;
+            vdetail = new vehicle(vtype, speed, disp);
+        }
+        function setSpeed() {
+             var sp= document.getElementById("nsp").value;
+             if (vdetail!=undefined) {
+               vdetail.setMaxSpeed(sp);
+             }
+             else {
+               document.getElementById("res").innerHTML="Create Vehicle First"
+             }
+        }
+        function getSpeed() {
+          if (vdetail!=undefined) {
+            document.getElementById("res1").innerHTML = vdetail.maxSpeed;
+          }
+          else {
+            document.getElementById("res1").innerHTML="Create Vehicle First"
+          }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="form1">
+        <fieldset>
+            <legend>Create New Bike Detail</legend>
+             <table>
+            <tr>
+                <td>Vehicle Type:</td>
+                <td><input type="text" name="vt" placeholder="Enter Vehicle type"/></td>
+            </tr>
+            <tr>
+                <td>Max Speed:</td>
+                <td><input type="Number" name="ms" placeholder="Enter Max speed" min="1"/></td>
+            </tr>
+            <tr>
+                <td>Displacement Type:</td>
+                <td><input type="text" name="dt" placeholder="Enter Displacement type"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="create" onclick="createvehicle()"/></td>
+            </tr>
+            <tr>
+                <td>Set New Speed:</td>
+                <td><input type="Number" onclick="setSpeed()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="set" onclick="getSpeed()"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="getSpeed"/></td>
+                <td id="res1">
+                    </td>
+             </tr>
+        </table>  
+        </fieldset>  
+    </form>    
+</body>
+
+</html>
