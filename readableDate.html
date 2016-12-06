@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Readable format Date</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        function eventDate()
+        {
+            var date = Number parseInt(document.form1.date.value);
+            var month = Number parseInt(document.form1.month.value);
+            var year = Number parseInt(document.form.year.value);
+
+            var newDate = Number parseInt(document.form1.newDate.value);
+            var newMonth = Number parseInt(document.form1.newMonth.value);
+            var newYear = Number parseInt(document.form.newYear.value);
+
+            document.write("");
+
+        }
+
+    </script>
+<form >
+    
+    <fieldset>
+        <table>
+        <legend>Event Detail</legend>
+        
+        <tr>
+        <h3>Event Inaugral Date</h3>
+        </tr>
+       <tr>
+        <td>Date:</td><td><input type="Number" name="date" min="1" max="31" required/></td>
+        </tr>
+        <tr>
+        <td>Month:</td><td><input type="Number" name="month" min="1" max="12" required/></td>
+        </tr>
+        <tr>
+        <td>Year:</td><td><input type="Number" name="year" min="1900" max="2099" required/></td>
+        </tr>
+        <tr></tr><tr></tr><tr></tr>
+        </table>
+    
+        <table>
+        <tr>
+        <h3>Event Completion Date</h3> 
+        </tr>   
+        <tr>
+        <td>Date:</td><td><input type="Number" name="newDate" min="1" max="31" required/></td>
+        </tr>
+        <tr>
+        <td>Month:</td><td><input type="Number" name="newMonth" min="1" max="12" required/></td>
+        </tr>
+        <tr>
+        <td>Year:</td><td><input type="Number" name="newYear" min="1900" max="2099" required/></td>
+        </tr>
+        <tr></tr><tr></tr><tr></tr>
+        </table>
+        <table>
+        <tr></tr><tr></tr>
+        <tr>
+        <input type="button" value="Submit Details" onclick="eventDate()">
+        </tr>
+          </table>
+        </fieldset>
+      
+</form>
+
+</body>
+
+</html>
